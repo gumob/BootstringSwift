@@ -17,11 +17,6 @@ default_platform(:ios)
 
 platform :ios do
 
-    desc "Build Carthage"
-    lane :build_carthage do |options|
-        Action.sh "cd .. && carthage build --no-skip-current"
-    end
-
     desc "Run Tests"
     lane :tests do
         xcclean
@@ -37,5 +32,15 @@ platform :ios do
             scheme: "Bootstring-tvOS",
             devices: ["Apple TV"]
         )
+    end
+
+    desc "Build Carthage"
+    lane :build_carthage do |options|
+        Action.sh "cd .. && carthage build --no-skip-current"
+    end
+
+    desc "Build Cocoapods"
+    lane :build_cocoapods do |options|
+        Action.sh "cd .. && bundle exec pod lib lint --verbose  --no-clean"
     end
 end
