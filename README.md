@@ -51,7 +51,7 @@ pod 'BootstringSwift'
 import Bootstring
 
 "寿司".addingPunycodeEncoding          // Optional("xn--sprr0q")
-"xn--sprr0q".removingPunycodeEncoding // Optional("xn--sprr0q")
+"xn--sprr0q".removingPunycodeEncoding // Optional("寿司")
 ```
 
 
