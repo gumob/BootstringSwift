@@ -9,7 +9,7 @@ Pod::Spec.new do |s|
   s.frameworks             = 'Foundation'
   s.requires_arc           = true
   s.source                 = { :git => "https://github.com/gumob/BootstringSwift.git", :tag => "#{s.version}" }
-  s.source_files           = "Source/*.{swift}"
+  s.source_files           = "Source/*"
   s.ios.deployment_target  = "9.3"
   s.osx.deployment_target  = "10.12"
   s.tvos.deployment_target = "12.0"
