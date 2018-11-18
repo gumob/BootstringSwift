@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
 
-  s.name                   = "BootstringSwift"
+  s.name                   = "Bootstring"
   s.version                = "1.0.0"
   s.summary                = "A Pure Swift library for encod and decode punycoded strings supporting iOS, macOS, and tvOS."
   s.homepage               = "https://github.com/gumob/BootstringSwift"
