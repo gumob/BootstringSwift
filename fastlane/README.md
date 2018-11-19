@@ -26,11 +26,16 @@ Run Tests
 fastlane ios build_carthage
 ```
 Build Carthage
-### ios build_cocoapods
+### ios lint_cocoapods
 ```
-fastlane ios build_cocoapods
+fastlane ios lint_cocoapods
 ```
-Build Cocoapods
+Lint Cocoapods
+### ios push_cocoapods
+```
+fastlane ios push_cocoapods
+```
+Push Cocoapods
 
 ----
 

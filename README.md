@@ -7,12 +7,12 @@
 ![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg)
 
 # BootstringSwift
-<code>BootstringSwift</code> is a pure Swift library to allows you to encode and decode a `punycoded` string.
-Most of all source codes are ported from [SwiftBootstring](https://github.com/YOCKOW/SwiftBootstring/tree/1.0.0) and add support for Carthage and Cocoapods.
+<code>BootstringSwift</code> is a pure Swift library to allows you to encode and decode `punycoded` strings using Bootstring algorithm.
+Most of all source codes are ported from [SwiftBootstring](https://github.com/YOCKOW/SwiftBootstring/tree/1.0.0). The version on this repository is added multiple platform support, support for Carthage and Cocoapods.
 
 ## What is Punycode?
 
-Punycode is a representation of Unicode with the limited ASCII character subset used for Internet host names. Using Punycode, host names containing Unicode characters are transcoded to a subset of ASCII consisting of letters, digits, and hyphen, which is called the Letter-Digit-Hyphen (LDH) subset. For example, München (German name for Munich) is encoded as Mnchen-3ya. [(Read more on Wikipedia)](https://en.wikipedia.org/wiki/Punycode)
+Punycode is a representation of Unicode with the limited ASCII character subset used for Internet host names. Using Punycode, host names containing Unicode characters are transcoded to a subset of ASCII consisting of letters, digits, and hyphen, which is called the Letter-Digit-Hyphen (LDH) subset. For example, München (German name for Munich) is encoded as Mnchen-3ya. [(Wikipedia)](https://en.wikipedia.org/wiki/Punycode)
 
 ## Requirements
 
@@ -42,7 +42,7 @@ To integrate Bootstring into your project, add the following to your `Podfile`.
 platform :ios, '9.3'
 use_frameworks!
 
-pod 'BootstringSwift'
+pod 'Bootstring'
 ```
 
 ## Usage
