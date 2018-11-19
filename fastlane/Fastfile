@@ -41,6 +41,6 @@ platform :ios do
 
     desc "Build Cocoapods"
     lane :build_cocoapods do |options|
-        Action.sh "cd .. && bundle exec pod lib lint --verbose  --no-clean"
+        Action.sh "cd .. && pod lib lint --verbose  --no-clean"
     end
 end
