@@ -8,7 +8,7 @@
 
 # BootstringSwift
 <code>BootstringSwift</code> is a pure Swift library to allows you to encode and decode `punycoded` strings using Bootstring algorithm.
-Most of all source codes are ported from [SwiftBootstring](https://github.com/YOCKOW/SwiftBootstring/tree/1.0.0) and add support for Carthage and Cocoapods.
+Most of all source codes are ported from [SwiftBootstring](https://github.com/YOCKOW/SwiftBootstring/tree/1.0.0). The version on this repository is added multiple platform support, support for Carthage and Cocoapods.
 
 ## What is Punycode?
 
