@@ -31,6 +31,11 @@ Build Carthage
 fastlane ios build_cocoapods
 ```
 Build Cocoapods
+### ios push_cocoapods
+```
+fastlane ios push_cocoapods
+```
+Push Cocoapods
 
 ----
 
