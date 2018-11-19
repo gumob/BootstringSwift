@@ -1,19 +1,17 @@
-# This file contains the fastlane.tools configuration
-# You can find the documentation at https://docs.fastlane.tools
-#
-# For a list of all available actions, check out
-#
-#     https://docs.fastlane.tools/actions
-#
-# For a list of all available plugins, check out
-#
-#     https://docs.fastlane.tools/plugins/available-plugins
-#
-
-# Uncomment the line if you want fastlane to automatically update itself
-# update_fastlane
-
 default_platform(:ios)
+
+#
+# Workaround for following error while executing `pod lib lint` and `pod trunk push`
+#
+# EXPANDED_CODE_SIGN_IDENTITY: unbound variable
+# Command PhaseScriptExecution failed with a nonzero exit code
+#
+# For more information is available at
+# https://github.com/CocoaPods/CocoaPods/issues/8000#issuecomment-434488071
+#
+ENV["EXPANDED_CODE_SIGN_IDENTITY"] = ""
+ENV["EXPANDED_CODE_SIGN_IDENTITY_NAME"] = ""
+ENV["EXPANDED_PROVISIONING_PROFILE"] = ""
 
 platform :ios do
 
@@ -36,11 +34,21 @@ platform :ios do
 
     desc "Build Carthage"
     lane :build_carthage do |options|
-        Action.sh "cd .. && carthage build --no-skip-current"
+        carthage(
+            command: "build",
+            verbose: true,
+            no_skip_current: true
+        )
     end
 
-    desc "Build Cocoapods"
-    lane :build_cocoapods do |options|
-        Action.sh "cd .. && pod lib lint --verbose  --no-clean"
+    desc "Lint Cocoapods"
+    lane :lint_cocoapods do |options|
+        pod_lib_lint(verbose: true)
+    end
+
+    desc "Push Cocoapods"
+    lane :push_cocoapods do |options|
+        pod_lib_lint(verbose: true)
+        pod_push(path: "Bootstring.podspec")
     end
 end
