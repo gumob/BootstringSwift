@@ -6,6 +6,8 @@
 ![Language](https://img.shields.io/badge/Language-Swift%204.2-orange.svg)
 ![Packagist](https://img.shields.io/packagist/l/doctrine/orm.svg)
 
+⚠️ This repository is no longer maintained. Please use [`PunycodeSwift`](https://github.com/gumob/PunycodeSwift) instead.
+
 # BootstringSwift
 <code>BootstringSwift</code> is a pure Swift library to allows you to encode and decode `punycoded` strings using Bootstring algorithm.
 Most of all source codes are ported from [SwiftBootstring](https://github.com/YOCKOW/SwiftBootstring/tree/1.0.0). The version on this repository is added multiple platform support, support for Carthage and Cocoapods.
